@@ -1,0 +1,70 @@
+@import "../../colors/index.scss";
+p {
+  margin: 0;
+  padding: 0;
+}
+.footer_container {
+  background: $secondary;
+  display: flex;
+  flex-direction: column;
+  p {
+    color: $white;
+  }
+  &__top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 40px;
+    &__row {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 20px;
+      &__header {
+        font-size: 42px;
+        font-weight: bold;
+        font-family: "Roboto";
+        margin: 10px;
+      }
+      &__title {
+        font-size: 16px;
+        font-weight: bold;
+        font-family: "Roboto";
+        padding: 5px;
+      }
+      &__data {
+        font-size: 24px;
+        font-family: "Roboto";
+        padding: 5px;
+      }
+      a {
+        text-decoration: none;
+        color: $white;
+      }
+    }
+  }
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    align-items: center;
+    &__info {
+      display: flex;
+      box-sizing: border-box;
+      margin: 20px 150px;
+      align-items: center;
+      &__title {
+        font-size: 18px;
+        font-family: "Roboto";
+        padding: 2px;
+      }
+      &__data {
+        font-size: 18px;
+        font-weight: bold;
+        font-family: "Roboto";
+        padding: 2px;
+      }
+    }
+  }
+}

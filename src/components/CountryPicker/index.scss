@@ -1,0 +1,46 @@
+@import "../../colors/index.scss";
+
+.country_with_flag_container {
+  &__list {
+    border: 1px solid $white;
+    background: $white;
+    position: absolute;
+    max-height: 200px;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+}
+.flag_and_name {
+  display: flex;
+  align-items: center;
+  border: 1px solid $white;
+  background: $white;
+  width: 288px;
+  border-radius: 6px 0px 0px 6px;
+  padding: 10px;
+  cursor: pointer;
+  // &:hover {
+  //   background: #eee;
+  //   border: 1px solid #eee;
+  // }
+  span {
+    font-size: 30px;
+    margin-left: 10px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+  }
+  p {
+    margin: 0;
+    padding: 10px 15px;
+    font-size: 16px;
+    font-family: "Roboto";
+    font-weight: bold;
+    color: $textMain;
+    flex: 1;
+  }
+  img {
+    margin-right: 20px;
+    width: 11px;
+  }
+}

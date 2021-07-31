@@ -1,0 +1,101 @@
+@import "../../colors/index.scss";
+.scrollable_content_container {
+  background: $white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__title {
+    margin: 100px 20px 50px 20px;
+    font-size: 48px;
+    font-weight: bold;
+    font-family: "Bebas Neue";
+    color: $textMain;
+  }
+  &__continents_container {
+    max-width: 100%;
+    &__slider {
+      display: flex;
+      margin-bottom: 100px;
+      overflow-x: auto;
+      &__continent {
+        margin: 10px 60px;
+        display: flex;
+        border: 1px solid #fff;
+        border-radius: 8px;
+        box-shadow: 0px 3px 16px #0000001f;
+        box-sizing: border-box;
+        &__left {
+          padding: 30px 60px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          align-items: center;
+          width: 200px;
+          &__title {
+            font-size: 32px;
+            font-weight: bold;
+            font-family: "Bebas Neue";
+            color: $textMain;
+          }
+          &__cases {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 25px 0;
+            margin: 25px 0;
+            &__value {
+              color: $primary;
+              font-size: 56px;
+              font-family: "Roboto";
+            }
+            &__new_cases {
+              font-weight: bold;
+              font-size: 16px;
+              font-family: "Roboto";
+              color: $textMain;
+            }
+          }
+          &__total {
+            font-size: 16px;
+            font-family: "Roboto";
+            color: $textMinor;
+          }
+        }
+        &__right {
+          background: $primary;
+          border-radius: 0 8px 8px 0;
+          box-sizing: border-box;
+          &__content {
+            display: flex;
+            padding: 30px 40px;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+            &:last-child {
+              border-bottom: none;
+            }
+            &__value {
+              font-size: 26px;
+              font-family: "Roboto";
+              color: $white;
+            }
+            &__value_title {
+              font-size: 10px;
+              font-weight: bold;
+              font-family: "Roboto";
+              color: $textMain;
+            }
+            &__total {
+              text-align: center;
+              width: 200px;
+              font-size: 12px;
+              font-family: "Roboto";
+              color: $white;
+            }
+          }
+        }
+      }
+    }
+  }
+}

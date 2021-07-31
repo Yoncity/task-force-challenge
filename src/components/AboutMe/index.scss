@@ -1,0 +1,44 @@
+@import "../../colors/index.scss";
+p {
+  margin: 0;
+}
+.about_me_container {
+  background: $white;
+  display: flex;
+  &__left {
+    flex: 1;
+    text-align: right;
+    img {
+      height: 600px;
+      // width: 100%;
+    }
+  }
+  &__right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 70px;
+    flex: 1;
+    background: $lightGray;
+    &__name {
+      font-size: 72px;
+      font-weight: bold;
+      font-family: "Bebas Neue";
+      color: $textMain;
+      padding: 10px;
+    }
+    &__skill {
+      font-size: 24px;
+      font-weight: bold;
+      font-family: "Roboto";
+      color: $textMain;
+      padding: 10px 15px;
+    }
+    &__date {
+      font-size: 16px;
+      font-family: "Roboto";
+      color: $textMinor;
+      padding: 10px 15px;
+    }
+  }
+}

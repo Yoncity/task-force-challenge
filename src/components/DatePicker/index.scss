@@ -1,0 +1,29 @@
+@import "../../colors/index.scss";
+
+.main_container__inputs__date {
+  position: relative;
+  border: 1px solid $white;
+  background: $white;
+
+  margin: 0 5px;
+  width: 235px;
+  display: flex;
+  cursor: pointer;
+  p {
+    flex: 1;
+    margin: 0;
+    font-family: "Roboto";
+    font-weight: bold;
+    font-size: 16px;
+    color: $textMain;
+    padding: 20px;
+  }
+  img {
+    padding: 10px;
+  }
+  &__picker {
+    position: absolute;
+    left: 0;
+    top: 60px;
+  }
+}

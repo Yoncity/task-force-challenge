@@ -1,0 +1,33 @@
+@import "../../colors/index.scss";
+p {
+  margin: 0;
+  padding: 0;
+  color: $white;
+}
+.header_container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 37px 0;
+  &__main_title {
+    color: $white;
+    margin-left: 150px;
+    font-size: 42px;
+    font-weight: bold;
+    font-family: "Bebas Neue";
+  }
+  &__contact {
+    display: flex;
+    margin-right: 150px;
+    border: 1px solid $secondary;
+    border-radius: 6px;
+    padding: 15px 45px;
+    background: $secondary;
+    p {
+      color: $white;
+      font-size: 18px;
+      font-weight: bold;
+      font-family: "Roboto";
+    }
+  }
+}
