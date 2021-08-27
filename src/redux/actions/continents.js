@@ -1,14 +1,16 @@
 import * as types from "../actionTypes/continents";
 import axios from "axios";
 
-const getContinentsStarted = () => ({
+export const getContinentsStarted = () => ({
   type: types.GET_CONTINENTS_STARTED,
 });
-const getContinentsSuccess = (data) => ({
+
+export const getContinentsSuccess = (data) => ({
   type: types.GET_CONTINENTS_SUCCESS,
   payload: { data },
 });
-const getContinentsError = (error) => ({
+
+export const getContinentsError = (error) => ({
   type: types.GET_CONTINENTS_FAILED,
   payload: { error },
 });

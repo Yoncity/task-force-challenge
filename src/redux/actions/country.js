@@ -1,14 +1,15 @@
 import * as types from "../actionTypes/country";
 import axios from "axios";
 
-const getCountryStarted = () => ({
+export const getCountryStarted = () => ({
   type: types.GET_COUNTRY_STARTED,
 });
-const getCountrySuccess = (data) => ({
+export const getCountrySuccess = (data) => ({
   type: types.GET_COUNTRY_SUCCESS,
   payload: { data },
 });
-const getCountryError = (error) => ({
+
+export const getCountryError = (error) => ({
   type: types.GET_COUNTRY_FAILED,
   payload: { error },
 });
