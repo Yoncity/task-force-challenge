@@ -1,9 +1,4 @@
 export default {
-  auth: {
-    loading: false,
-    error: null,
-    user: {},
-  },
   continents: {
     loading: false,
     error: null,

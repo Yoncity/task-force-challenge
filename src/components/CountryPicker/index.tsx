@@ -1,3 +1,4 @@
+import React from "react";
 import "./index.scss";
 import { useState, useEffect } from "react";
 import down from "../../assets/icons/down.svg";
@@ -75,12 +76,18 @@ const CountryWithFlag = ({
 
   return (
     <div className="country_with_flag_container" ref={ref}>
-      <div className="country_with_flag_container__selected">
+      <div
+        className="country_with_flag_container__selected"
+        data-testid="active-country"
+      >
         {flagAndName(selectedCountry, true, () => setShowSelect(!showSelect))}
       </div>
 
       {showSelect && (
-        <div className="country_with_flag_container__list">
+        <div
+          className="country_with_flag_container__list"
+          data-testid="country-list"
+        >
           {generateCountryList()}
         </div>
       )}

@@ -1,3 +1,4 @@
+import React from "react";
 import "./index.scss";
 import ME from "../../assets/images/ME.jpg";
 import Months from "../../constants/months";

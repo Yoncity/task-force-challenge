@@ -1,3 +1,4 @@
+import React from "react";
 import "./index.scss";
 import { useSelector } from "react-redux";
 import locale from "../../locale";
