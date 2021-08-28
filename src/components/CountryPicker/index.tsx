@@ -1,5 +1,4 @@
 import "./index.scss";
-import _ from "country-data";
 import { useState, useEffect } from "react";
 import down from "../../assets/icons/down.svg";
 import { useRef } from "react";

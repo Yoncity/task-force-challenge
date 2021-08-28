@@ -1,6 +1,6 @@
 import "./index.scss";
-import ME from "assets/images/ME.jpg";
-import Months from "constants/months";
+import ME from "../../assets/images/ME.jpg";
+import Months from "../../constants/months";
 
 const AboutMe = () => {
   const date = new Date();

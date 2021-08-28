@@ -1,8 +1,8 @@
 import "./index.scss";
 import { useSelector } from "react-redux";
-import locale from "locale";
-import { InitialState } from "redux/initialState";
-import Loader from "components/Loader";
+import locale from "../../locale";
+import { InitialState } from "../../redux/initialState";
+import Loader from "../../components/Loader";
 
 const Details = () => {
   const { data, loading, error } = useSelector(
@@ -14,7 +14,9 @@ const Details = () => {
       <>
         <div className="details_container__top">
           <div className="details_container__top__info">
-            <p className="details_container__top__info__value">{data.cases}</p>
+            <p className="details_container__top__info__value">
+              {Number(data.cases).toLocaleString()}
+            </p>
             <p className="details_container__top__info__value_title">
               {locale.eng.cumulatively}
             </p>
@@ -30,7 +32,7 @@ const Details = () => {
                 {locale.eng.tests}
               </p>
               <p className="details_container__bottom__info__column__total">
-                {data.tests}
+                {Number(data.tests).toLocaleString()}
               </p>
             </div>
 
@@ -54,7 +56,7 @@ const Details = () => {
                 {locale.eng.hospitalized}
               </p>
               <p className="details_container__bottom__info__column__total">
-                {data.critical}
+                {Number(data.critical).toLocaleString()}
               </p>
             </div>
 
@@ -66,7 +68,7 @@ const Details = () => {
                 {locale.eng.recovered}
               </p>
               <p className="details_container__bottom__info__column__total">
-                {data.recovered}
+                {Number(data.recovered).toLocaleString()}
               </p>
             </div>
 
@@ -78,7 +80,7 @@ const Details = () => {
                 {locale.eng.deaths}
               </p>
               <p className="details_container__bottom__info__column__total">
-                {data.deaths}
+                {Number(data.deaths).toLocaleString()}
               </p>
             </div>
 

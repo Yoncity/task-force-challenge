@@ -1,5 +1,5 @@
 import "./index.scss";
-import locale from "locale";
+import locale from "../../locale";
 
 const Footer = () => {
   return (
