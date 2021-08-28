@@ -1,0 +1,12 @@
+version: "3.3"
+services:
+  app:
+    build:
+      context: .
+    volumes:
+      - .:/task-force-challenge
+    ports:
+      - 5000:5000
+    image: app:task-force-challenge
+    container_name: react_container
+    command: npm run start
