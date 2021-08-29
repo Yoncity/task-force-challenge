@@ -13,10 +13,49 @@
   }
   &__continents_container {
     max-width: 100%;
+    margin-bottom: 100px;
+    display: flex;
+    align-items: center;
+    &__button {
+      margin-bottom: 50px;
+      img {
+        width: 30px;
+        height: 30px;
+        padding: 20px;
+        background: $secondary;
+        cursor: pointer;
+        &:hover {
+          background: rgba($color: $secondary, $alpha: 0.9);
+        }
+        &:active {
+          background: rgba($color: $secondary, $alpha: 0.8);
+        }
+      }
+      .last_continent {
+        background: rgba($color: #000, $alpha: 0.5);
+        &:hover {
+          background: rgba($color: #000, $alpha: 0.4);
+        }
+        &:active {
+          background: rgba($color: #000, $alpha: 0.3);
+        }
+      }
+      &__left_arrow {
+        position: absolute;
+        border-radius: 50%;
+        left: 50px;
+      }
+      &__right_arrow {
+        border-radius: 50%;
+        position: absolute;
+        // top: 0;
+        right: 50px;
+        transform: rotate(180deg);
+      }
+    }
     &__slider {
       display: flex;
-      margin-bottom: 100px;
-      overflow-x: auto;
+      overflow: hidden;
       &__continent {
         margin: 10px 60px;
         display: flex;
@@ -24,13 +63,19 @@
         border-radius: 8px;
         box-shadow: 0px 3px 16px #0000001f;
         box-sizing: border-box;
+        // display: none;
+        &:first-child {
+        }
+        &:last-child {
+        }
         &__left {
           padding: 30px 60px;
           display: flex;
           flex-direction: column;
           justify-content: space-around;
           align-items: center;
-          width: 200px;
+          width: 350px;
+          box-sizing: border-box;
           &__title {
             font-size: 32px;
             font-weight: bold;
@@ -65,6 +110,7 @@
           background: $primary;
           border-radius: 0 8px 8px 0;
           box-sizing: border-box;
+          width: 300px;
           &__content {
             display: flex;
             padding: 30px 40px;

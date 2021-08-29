@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import "./index.scss";
@@ -6,11 +6,37 @@ import locale from "../../locale";
 import getContinents from "../../redux/actions/continents";
 import { ContinentState } from "../../redux/initialState";
 import Loader from "../../components/Loader";
+import arrow from "../../assets/icons/arrow.svg";
 
 const ScrollableContent = () => {
   const { loading, error, data } = useSelector(
     (state: ContinentState) => state.continents
   );
+
+  const [current, setCurrent] = useState(0);
+  console.log("🚀 --- ScrollableContent --- current", current);
+
+  const activeContinent = useRef(null);
+
+  const nextContent = () => {
+    setCurrent(current === data.length - 1 ? current : current + 1);
+    // @ts-ignore
+    activeContinent.current.scrollIntoView({
+      behavior: "smooth",
+      block: "center",
+      inline: "center",
+    });
+  };
+
+  const prevContent = () => {
+    setCurrent(current === 0 ? current : current - 1);
+    // @ts-ignore
+    activeContinent.current.scrollIntoView({
+      behavior: "smooth",
+      block: "center",
+      inline: "center",
+    });
+  };
 
   const dispatch = useDispatch();
 
@@ -19,8 +45,11 @@ const ScrollableContent = () => {
   }, [dispatch]);
 
   const renderContinents = () => {
-    return data.map((item) => (
-      <div className="scrollable_content_container__continents_container__slider__continent">
+    return data.map((item, index) => (
+      <div
+        className={`scrollable_content_container__continents_container__slider__continent`}
+        ref={index === current ? activeContinent : null}
+      >
         <div className="scrollable_content_container__continents_container__slider__continent__left">
           <p className="scrollable_content_container__continents_container__slider__continent__left__title">
             {item.continent}
@@ -90,6 +119,27 @@ const ScrollableContent = () => {
     if (data.length > 0)
       return (
         <div className="scrollable_content_container__continents_container">
+          <div className="scrollable_content_container__continents_container__button">
+            <img
+              className={`scrollable_content_container__continents_container__button__left_arrow ${
+                current === 0 ? "last_continent" : ""
+              }`}
+              src={arrow}
+              alt="Left arrow"
+              onClick={prevContent}
+            />
+          </div>
+
+          <div className="scrollable_content_container__continents_container__button">
+            <img
+              className={`scrollable_content_container__continents_container__button__right_arrow ${
+                current === data.length - 1 ? "last_continent" : ""
+              }`}
+              src={arrow}
+              alt="Right arrow"
+              onClick={nextContent}
+            />
+          </div>
           <div className="scrollable_content_container__continents_container__slider">
             {data && renderContinents()}
           </div>
