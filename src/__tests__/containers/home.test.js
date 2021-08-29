@@ -7,6 +7,7 @@ import thunk from "redux-thunk";
 import reducers from "../../redux/reducers";
 import initialState from "../../redux/initialState";
 import Home from "../../containers/Home";
+import Months from "../../constants/months";
 
 let store;
 
@@ -47,9 +48,14 @@ describe("Home Container", () => {
 
   it("Should render my portrait", () => {
     const { getByText } = container;
+    const date = new Date();
+    const day = date.getDay() >= 10 ? date.getDay() : "0" + date.getDay();
+    const month = Months[date.getMonth()];
+    const year = date.getFullYear();
+
     getByText("YONATAN DAWIT");
     getByText("Software Developer");
-    getByText("06 August 2021");
+    getByText(`${day} ${month} ${year}`);
   });
   it("Should render Footer properly", () => {
     const { getByText } = container;

@@ -1,8 +1,18 @@
+image: node:15.12.0
+
 stages:
+  - install
   - test
+
+install_dependencies:
+  stage: install
+  script:
+    - npm install
+  artifacts:
+    paths:
+      - node_modules/
 
 unit-test-job:
   stage: test
   script:
-    - npm install
     - npm run test
