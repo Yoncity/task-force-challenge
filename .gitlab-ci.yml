@@ -2,6 +2,8 @@ image: node:15.12.0
 
 stages:
   - install
+  - build
+  - lint
   - test
 
 install_dependencies:
@@ -11,8 +13,26 @@ install_dependencies:
   artifacts:
     paths:
       - node_modules/
+  only:
+    - merge_requests
 
-unit-test-job:
+build:
+  stage: build
+  script:
+    - npm run build
+  only:
+    - merge_requests
+
+lint_check:
+  stage: lint
+  script:
+    - npm run lint
+  only:
+    - merge_requests
+
+unit_tests_job:
   stage: test
   script:
     - npm run test
+  only:
+    - merge_requests

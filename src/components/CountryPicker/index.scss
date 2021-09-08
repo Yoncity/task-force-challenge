@@ -1,4 +1,4 @@
-@import "../../colors/index.scss";
+@import '../../colors/index.scss';
 
 .country_with_flag_container {
   &__list {
@@ -34,7 +34,7 @@
     margin: 0;
     padding: 10px 15px;
     font-size: 16px;
-    font-family: "Roboto";
+    font-family: 'Roboto';
     font-weight: bold;
     color: $textMain;
     flex: 1;

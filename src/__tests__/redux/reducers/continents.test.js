@@ -1,14 +1,14 @@
-import "regenerator-runtime";
-import * as types from "../../../redux/actionTypes/continents";
-import continentsReducer from "../../../redux/reducers/continents";
-import initialState from "../../../redux/initialState";
+import 'regenerator-runtime';
+import * as types from '../../../redux/actionTypes/continents';
+import continentsReducer from '../../../redux/reducers/continents';
+import initialState from '../../../redux/initialState';
 
-describe("Continents Reducer", () => {
+describe('Continents Reducer', () => {
   const reducer = (action) => {
     return continentsReducer(initialState.continents, action);
   };
 
-  it("Default State", () => {
+  it('Default State', () => {
     const action = {
       type: undefined,
     };
@@ -32,10 +32,10 @@ describe("Continents Reducer", () => {
   it(types.GET_CONTINENTS_SUCCESS, () => {
     const continentsInfo = [
       {
-        name: "Africa",
-        cases: "10000000",
+        name: 'Africa',
+        cases: '10000000',
       },
-      { name: "Europe", cases: "20000000" },
+      { name: 'Europe', cases: '20000000' },
     ];
     const action = {
       type: types.GET_CONTINENTS_SUCCESS,
@@ -52,7 +52,7 @@ describe("Continents Reducer", () => {
 
   it(types.GET_CONTINENTS_FAILED, () => {
     const error = {
-      message: "Network Error",
+      message: 'Network Error',
     };
     const action = {
       type: types.GET_CONTINENTS_FAILED,

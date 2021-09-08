@@ -1,4 +1,4 @@
-@import "../../colors/index.scss";
+@import '../../colors/index.scss';
 p {
   margin: 0;
 }
@@ -23,20 +23,20 @@ p {
     &__name {
       font-size: 72px;
       font-weight: bold;
-      font-family: "Bebas Neue";
+      font-family: 'Bebas Neue';
       color: $textMain;
       padding: 10px;
     }
     &__skill {
       font-size: 24px;
       font-weight: bold;
-      font-family: "Roboto";
+      font-family: 'Roboto';
       color: $textMain;
       padding: 10px 15px;
     }
     &__date {
       font-size: 16px;
-      font-family: "Roboto";
+      font-family: 'Roboto';
       color: $textMinor;
       padding: 10px 15px;
     }
