@@ -1,5 +1,5 @@
-import * as types from "../actionTypes/continents";
-import axios from "axios";
+import axios from 'axios';
+import * as types from '../actionTypes/continents';
 
 export const getContinentsStarted = () => ({
   type: types.GET_CONTINENTS_STARTED,
@@ -20,7 +20,7 @@ const getContinents = () => (dispatch) => {
 
   try {
     axios
-      .get("https://corona.lmao.ninja/v2/continents?yesterday=false&sort")
+      .get('https://corona.lmao.ninja/v2/continents?yesterday=false&sort')
       .then((data) => dispatch(getContinentsSuccess(data.data)))
       .catch((error) => dispatch(getContinentsError(error)));
   } catch (error) {

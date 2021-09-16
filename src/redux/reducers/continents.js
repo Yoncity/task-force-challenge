@@ -1,5 +1,5 @@
-import * as types from "../actionTypes/continents";
-import initialState from "../initialState";
+import * as types from '../actionTypes/continents';
+import initialState from '../initialState';
 
 const continents = (state = initialState.continents, { type, payload }) => {
   switch (type) {

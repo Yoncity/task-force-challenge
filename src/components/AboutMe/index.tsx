@@ -1,11 +1,11 @@
-import React from "react";
-import "./index.scss";
-import ME from "../../assets/images/ME.jpg";
-import Months from "../../constants/months";
+import React from 'react';
+import './index.scss';
+import ME from '../../assets/images/ME.jpg';
+import Months from '../../constants/months';
 
 const AboutMe = () => {
   const date = new Date();
-  const day = date.getDay() >= 10 ? date.getDay() : "0" + date.getDay();
+  const day = date.getDay() >= 10 ? date.getDay() : '0' + date.getDay();
   const month = Months[date.getMonth()];
   const year = date.getFullYear();
 

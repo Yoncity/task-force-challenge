@@ -1,14 +1,14 @@
-import "regenerator-runtime";
-import * as types from "../../../redux/actionTypes/country";
-import countryReducer from "../../../redux/reducers/country";
-import initialState from "../../../redux/initialState";
+import 'regenerator-runtime';
+import * as types from '../../../redux/actionTypes/country';
+import countryReducer from '../../../redux/reducers/country';
+import initialState from '../../../redux/initialState';
 
-describe("Country Reducer", () => {
+describe('Country Reducer', () => {
   const reducer = (action) => {
     return countryReducer(initialState.country, action);
   };
 
-  it("Default State", () => {
+  it('Default State', () => {
     const action = {
       type: undefined,
     };
@@ -32,10 +32,10 @@ describe("Country Reducer", () => {
   it(types.GET_COUNTRY_SUCCESS, () => {
     const countryInfo = [
       {
-        name: "Rwanda",
-        cases: "1000000",
+        name: 'Rwanda',
+        cases: '1000000',
       },
-      { name: "Eritrea", cases: "100000" },
+      { name: 'Eritrea', cases: '100000' },
     ];
     const action = {
       type: types.GET_COUNTRY_SUCCESS,
@@ -52,7 +52,7 @@ describe("Country Reducer", () => {
 
   it(types.GET_COUNTRY_FAILED, () => {
     const error = {
-      message: "Network Error",
+      message: 'Network Error',
     };
     const action = {
       type: types.GET_COUNTRY_FAILED,

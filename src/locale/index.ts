@@ -27,31 +27,31 @@ export type Locales = {
 };
 
 const eng: Locales = {
-  pageNotFound: "Page Not Found",
+  pageNotFound: 'Page Not Found',
   header: {
-    title: "C O V I C A L C",
-    contact: "CONTACT",
+    title: 'C O V I C A L C',
+    contact: 'CONTACT',
   },
   countryAndDateInput: {
-    updates: "UPDATES",
-    hint: "Search a country",
+    updates: 'UPDATES',
+    hint: 'Search a country',
   },
   footer: {
-    reachMe: "REACH ME",
-    profile: "Profile",
-    develpedBy: "Developed By",
+    reachMe: 'REACH ME',
+    profile: 'Profile',
+    develpedBy: 'Developed By',
   },
-  email: "Email",
-  phone: "Phone",
-  perContinents: "PER CONTINENTS",
-  cumulatively: "Cumulatively",
-  tests: "Tests",
-  positiveCases: "Positive Cases",
-  hospitalized: "Critical",
-  recovered: "Recoverd",
-  deaths: "Deaths",
-  vaccinated: "Vaccinated",
-  submit: "SUBMIT",
+  email: 'Email',
+  phone: 'Phone',
+  perContinents: 'PER CONTINENTS',
+  cumulatively: 'Cumulatively',
+  tests: 'Tests',
+  positiveCases: 'Positive Cases',
+  hospitalized: 'Critical',
+  recovered: 'Recoverd',
+  deaths: 'Deaths',
+  vaccinated: 'Vaccinated',
+  submit: 'SUBMIT',
 };
 
 export default { eng };

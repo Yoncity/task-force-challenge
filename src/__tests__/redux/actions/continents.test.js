@@ -1,10 +1,10 @@
-import "regenerator-runtime";
-import * as types from "../../../redux/actionTypes/continents";
-import * as actions from "../../../redux/actions/continents";
-import configureMockStore from "redux-mock-store";
-import thunk from "redux-thunk";
+import 'regenerator-runtime';
+import * as types from '../../../redux/actionTypes/continents';
+import * as actions from '../../../redux/actions/continents';
+import configureMockStore from 'redux-mock-store';
+import thunk from 'redux-thunk';
 
-describe("Country Actions", () => {
+describe('Country Actions', () => {
   const mockStore = configureMockStore([thunk]);
   let store;
 

@@ -1,20 +1,20 @@
-import React, { useRef, useState } from "react";
-import { useEffect } from "react";
-import { useSelector, useDispatch } from "react-redux";
-import "./index.scss";
-import locale from "../../locale";
-import getContinents from "../../redux/actions/continents";
-import { ContinentState } from "../../redux/initialState";
-import Loader from "../../components/Loader";
-import arrow from "../../assets/icons/arrow.svg";
+import React, { useRef, useState } from 'react';
+import { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import './index.scss';
+import locale from '../../locale';
+import getContinents from '../../redux/actions/continents';
+import { ContinentState } from '../../redux/initialState';
+import Loader from '../../components/Loader';
+import arrow from '../../assets/icons/arrow.svg';
 
 const ScrollableContent = () => {
   const { loading, error, data } = useSelector(
-    (state: ContinentState) => state.continents
+    (state: ContinentState) => state.continents,
   );
 
   const [current, setCurrent] = useState(0);
-  console.log("🚀 --- ScrollableContent --- current", current);
+  console.log('🚀 --- ScrollableContent --- current', current);
 
   const activeContinent = useRef(null);
 
@@ -22,9 +22,9 @@ const ScrollableContent = () => {
     setCurrent(current === data.length - 1 ? current : current + 1);
     // @ts-ignore
     activeContinent.current.scrollIntoView({
-      behavior: "smooth",
-      block: "center",
-      inline: "center",
+      behavior: 'smooth',
+      block: 'center',
+      inline: 'center',
     });
   };
 
@@ -32,9 +32,9 @@ const ScrollableContent = () => {
     setCurrent(current === 0 ? current : current - 1);
     // @ts-ignore
     activeContinent.current.scrollIntoView({
-      behavior: "smooth",
-      block: "center",
-      inline: "center",
+      behavior: 'smooth',
+      block: 'center',
+      inline: 'center',
     });
   };
 
@@ -122,7 +122,7 @@ const ScrollableContent = () => {
           <div className="scrollable_content_container__continents_container__button">
             <img
               className={`scrollable_content_container__continents_container__button__left_arrow ${
-                current === 0 ? "last_continent" : ""
+                current === 0 ? 'last_continent' : ''
               }`}
               src={arrow}
               alt="Left arrow"
@@ -133,7 +133,7 @@ const ScrollableContent = () => {
           <div className="scrollable_content_container__continents_container__button">
             <img
               className={`scrollable_content_container__continents_container__button__right_arrow ${
-                current === data.length - 1 ? "last_continent" : ""
+                current === data.length - 1 ? 'last_continent' : ''
               }`}
               src={arrow}
               alt="Right arrow"

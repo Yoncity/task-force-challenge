@@ -1,10 +1,9 @@
-import React from "react";
-import { useEffect } from "react";
-import "./index.scss";
-import moment from "moment";
-import DatePicker from "react-datepicker";
-import calendar from "../../assets/icons/calendar.svg";
-import { useRef } from "react";
+import React from 'react';
+import { useEffect, useRef } from 'react';
+import './index.scss';
+import moment from 'moment';
+import DatePicker from 'react-datepicker';
+import calendar from '../../assets/icons/calendar.svg';
 
 const _DatePicker = ({
   date,
@@ -23,10 +22,10 @@ const _DatePicker = ({
     };
 
     // Bind the event listener
-    document.addEventListener("mousedown", handleClickOutside);
+    document.addEventListener('mousedown', handleClickOutside);
     return () => {
       // Unbind the event listener on clean up
-      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener('mousedown', handleClickOutside);
     };
   }, [ref, setShowDatePicker]);
 
@@ -36,7 +35,7 @@ const _DatePicker = ({
         className="main_container__inputs__date__display"
         onClick={() => setShowDatePicker(!showDatePicker)}
       >
-        {moment(date).format("DD MMM YYYY")}
+        {moment(date).format('DD MMM YYYY')}
       </p>
       <img
         src={calendar}

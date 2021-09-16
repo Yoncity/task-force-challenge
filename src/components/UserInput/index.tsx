@@ -1,13 +1,13 @@
-import React from "react";
-import { useState } from "react";
-import { useSelector, useDispatch } from "react-redux";
-import "./index.scss";
-import _ from "country-data";
-import locale from "../../locale";
-import CountryPicker from "../../components/CountryPicker";
-import DatePicker from "../../components/DatePicker";
-import getCountry from "../../redux/actions/country";
-import { InitialState } from "../../redux/initialState";
+import React from 'react';
+import { useState } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import './index.scss';
+import _ from 'country-data';
+import locale from '../../locale';
+import CountryPicker from '../../components/CountryPicker';
+import DatePicker from '../../components/DatePicker';
+import getCountry from '../../redux/actions/country';
+import { InitialState } from '../../redux/initialState';
 
 const CountryAndDateInput = () => {
   const { loading } = useSelector((state: InitialState) => state.country);
