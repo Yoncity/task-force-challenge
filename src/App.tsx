@@ -1,7 +1,7 @@
-import { BrowserRouter, Route, Switch } from "react-router-dom";
-import Home from "./containers/Home";
-import Error from "./components/Error";
-import locale from "./locale";
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import Home from './containers/Home';
+import Error from './components/Error';
+import locale from './locale';
 
 const App = () => {
   return (

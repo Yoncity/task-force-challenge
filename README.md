@@ -2,6 +2,10 @@
 
 This project is bootsrapped with create-react-up with Typscript template.
 
+### What does it do?
+
+This web-app returns the previous and current day's covid cases of a selected country.
+
 ## How to run this app.
 
 - First you will need to clone the node app.

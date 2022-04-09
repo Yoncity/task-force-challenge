@@ -1,5 +1,5 @@
-import * as types from "../actionTypes/country";
-import axios from "axios";
+import axios from 'axios';
+import * as types from '../actionTypes/country';
 
 export const getCountryStarted = () => ({
   type: types.GET_COUNTRY_STARTED,

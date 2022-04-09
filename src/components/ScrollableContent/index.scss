@@ -1,4 +1,4 @@
-@import "../../colors/index.scss";
+@import '../../colors/index.scss';
 .scrollable_content_container {
   background: $white;
   display: flex;
@@ -8,7 +8,7 @@
     margin: 100px 20px 50px 20px;
     font-size: 48px;
     font-weight: bold;
-    font-family: "Bebas Neue";
+    font-family: 'Bebas Neue';
     color: $textMain;
   }
   &__continents_container {
@@ -79,7 +79,7 @@
           &__title {
             font-size: 32px;
             font-weight: bold;
-            font-family: "Bebas Neue";
+            font-family: 'Bebas Neue';
             color: $textMain;
           }
           &__cases {
@@ -91,18 +91,18 @@
             &__value {
               color: $primary;
               font-size: 56px;
-              font-family: "Roboto";
+              font-family: 'Roboto';
             }
             &__new_cases {
               font-weight: bold;
               font-size: 16px;
-              font-family: "Roboto";
+              font-family: 'Roboto';
               color: $textMain;
             }
           }
           &__total {
             font-size: 16px;
-            font-family: "Roboto";
+            font-family: 'Roboto';
             color: $textMinor;
           }
         }
@@ -123,20 +123,20 @@
             }
             &__value {
               font-size: 26px;
-              font-family: "Roboto";
+              font-family: 'Roboto';
               color: $white;
             }
             &__value_title {
               font-size: 10px;
               font-weight: bold;
-              font-family: "Roboto";
+              font-family: 'Roboto';
               color: $textMain;
             }
             &__total {
               text-align: center;
               width: 200px;
               font-size: 12px;
-              font-family: "Roboto";
+              font-family: 'Roboto';
               color: $white;
             }
           }

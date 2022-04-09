@@ -1,13 +1,13 @@
-import React from "react";
-import "./index.scss";
-import { useSelector } from "react-redux";
-import locale from "../../locale";
-import { InitialState } from "../../redux/initialState";
-import Loader from "../../components/Loader";
+import React from 'react';
+import './index.scss';
+import { useSelector } from 'react-redux';
+import locale from '../../locale';
+import { InitialState } from '../../redux/initialState';
+import Loader from '../../components/Loader';
 
 const Details = () => {
   const { data, loading, error } = useSelector(
-    (state: InitialState) => state.country
+    (state: InitialState) => state.country,
   );
 
   const renderData = () => {

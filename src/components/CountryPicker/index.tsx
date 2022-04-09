@@ -1,8 +1,7 @@
-import React from "react";
-import "./index.scss";
-import { useState, useEffect } from "react";
-import down from "../../assets/icons/down.svg";
-import { useRef } from "react";
+import React from 'react';
+import './index.scss';
+import { useState, useEffect, useRef } from 'react';
+import down from '../../assets/icons/down.svg';
 
 const CountryWithFlag = ({
   countries,
@@ -27,10 +26,10 @@ const CountryWithFlag = ({
     };
 
     // Bind the event listener
-    document.addEventListener("mousedown", handleClickOutside);
+    document.addEventListener('mousedown', handleClickOutside);
     return () => {
       // Unbind the event listener on clean up
-      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener('mousedown', handleClickOutside);
     };
   }, [ref]);
 
@@ -57,8 +56,8 @@ const CountryWithFlag = ({
     const elements: Array<format> = [];
     for (const item in countries) {
       if (
-        countries[item].status !== "deleted" &&
-        countries[item].status === "assigned" &&
+        countries[item].status !== 'deleted' &&
+        countries[item].status === 'assigned' &&
         countries[item].emoji !== undefined &&
         elements.findIndex((i) => i.name === countries[item].name) === -1
       ) {
@@ -70,7 +69,7 @@ const CountryWithFlag = ({
     }
 
     return elements.map((item) =>
-      flagAndName(item, false, () => selectOptionAction(item))
+      flagAndName(item, false, () => selectOptionAction(item)),
     );
   };
 
